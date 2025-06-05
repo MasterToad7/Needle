@@ -5,7 +5,7 @@
     #include <Windows.h>
     #define OS_TYPE_WINDOWS
 #elif __linux__
-    #include <pthreads.h>
+    #include <pthread.h>
     #define OS_TYPE_LINUX
 #else
     #error "OS not detected, Needle only supports Windows and Linux for the time being."
@@ -17,9 +17,9 @@ typedef struct ndl_thread
 
     HANDLE refThread;
 
-    #elif OS_TYPE_LINUX
+    #elif defined(OS_TYPE_LINUX)
 
-    pThread_t refThread;
+    pthread_t refThread;
 
     #endif
 } ndl_thread_t;

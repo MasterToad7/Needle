@@ -1,5 +1,5 @@
-
 #include <needle.h>
+#include <stdio.h>
 
 void ndl_sanityCheck()
 {
@@ -7,7 +7,7 @@ void ndl_sanityCheck()
 
     printf("Needle Is Linked Properly For Windows\n");
 
-    #elif OS_TYPE_LINUX
+    #elif defined(OS_TYPE_LINUX)
 
     printf("Needle Is Linked Properly For Linux\n");
 

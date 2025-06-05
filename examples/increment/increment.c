@@ -1,10 +1,10 @@
 #include <needle.h>
 #include <stdio.h>
 
-void increment(int* value)
+void* increment(void* value)
 {
-    *value += 1;
-    printf("New value is %d\n", *value);
+    *(int *)value += 1;
+    printf("New value is %d\n", *(int *)value);
 
     ndl_exitThread();
 

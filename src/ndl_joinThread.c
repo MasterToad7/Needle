@@ -6,7 +6,7 @@ void ndl_joinThread(ndl_thread_t* addrThread)
 
     WaitForSingleObject(addrThread->refThread,INFINITE);
     
-    #elif OS_TYPE_LINUX
+    #elif defined(OS_TYPE_LINUX)
 
     pthread_join(addrThread->refThread, NULL);
 

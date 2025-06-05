@@ -7,9 +7,9 @@ void ndl_createThread(ndl_thread_t* addrThread, void*(*startRoutine)(void*), voi
     DWORD threadId;
     addrThread->refThread = CreateThread(NULL,0,startRoutine,arg,0,&threadId);
 
-    #elif OS_TYPE_LINUX
+    #elif defined(OS_TYPE_LINUX)
 
-    pthread_create(addrThread->refThread, NULL, startRoutine, arg);
+    pthread_create(&addrThread->refThread, NULL, startRoutine, arg);
 
     #endif
 }

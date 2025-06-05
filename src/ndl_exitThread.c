@@ -6,7 +6,7 @@ void ndl_exitThread()
 
     ExitThread(NULL);
 
-    #elif OS_TYPE_LINUX
+    #elif defined(OS_TYPE_LINUX)
 
     pthread_exit(NULL);
 
