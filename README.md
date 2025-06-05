@@ -26,5 +26,5 @@ Run the following commands
 mkdir build
 cd build
 cmake ../
-cmake --build . --target example-increment
+cmake --build . --target examples-increment
 ```
